@@ -1,11 +1,13 @@
 .PHONY: help
 .DEFAULT_GOAL := help
 
+JUPYTER_PORT := 8888
+
 run: ## Run Python Script
 	@poetry run python src/main.py
 
 jupyter: ## Run JupyterLab
-	@poetry run jupyter lab
+	@poetry run jupyter lab --port=${JUPYTER_PORT} --notebook-dir=./notebooks
 
 help: ## Show help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \

@@ -14,5 +14,8 @@
 			}
 		}
 	},
-	"postCreateCommand": "poetry install --no-root"
+	"postCreateCommand": "poetry install --no-root",
+	"forwardPorts": [
+		8888
+	]
 }
