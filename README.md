@@ -25,16 +25,7 @@ poetry add <package name>
 ```sh
 make jupyter
 ```
-で JupyterLab が起動する. ポートフォワーディングは `.devcontainer/devcontainer.json` に記述する.
-
-例:
-```json
-{
-	"forwardPorts": [8888]
-}
-
-```
-ポートを指定して起動するには
+で JupyterLab が起動する. ポートフォワーディングは Dev Container が自動で行う. ポートを指定して起動するには
 ```sh
 make jupyter JUPYTER_PORT=8080
 ```
