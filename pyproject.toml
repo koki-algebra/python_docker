@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 numpy = "^1.26.2"
+jupyterlab = "^4.0.8"
 
 
 [build-system]
