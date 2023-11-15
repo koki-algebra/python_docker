@@ -7,7 +7,8 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
-				"njpwerner.autodocstring"
+				"njpwerner.autodocstring",
+				"ms-toolsai.jupyter"
 			],
 			"settings": {
 				"python.defaultInterpreterPath": ".venv/bin/python"

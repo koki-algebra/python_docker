@@ -22,6 +22,9 @@ poetry add <package name>
 で pip と同様にインストール可能.
 
 ## JupyterLab
+VSCode 上で notebook を実行することができる. notebook を開き, Select Kernel をクリックして `.venv/bin/python` を指定する.
+
+また, Jupyter サーバーを立てることもできる.
 ```sh
 make jupyter
 ```
