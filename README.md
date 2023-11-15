@@ -20,3 +20,9 @@ make run
 poetry add <package name>
 ```
 で pip と同様にインストール可能.
+
+## JupyterLab
+```sh
+make jupyter
+```
+で JupyterLab が起動する. 自動でポートフォワーディングされる.
