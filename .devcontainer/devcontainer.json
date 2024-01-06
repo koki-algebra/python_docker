@@ -9,12 +9,12 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"python.defaultInterpreterPath": ".venv/bin/python"
+				"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
 			},
 			"extensions": [
+				"ms-azuretools.vscode-docker",
 				"ms-python.python",
-				"ms-toolsai.jupyter",
-				"ms-azuretools.vscode-docker"
+				"ms-toolsai.jupyter"
 			]
 		}
 	},
@@ -22,16 +22,6 @@
 		{
 			"source": "${localEnv:HOME}/.config/git",
 			"target": "/home/vscode/.config/git",
-			"type": "bind"
-		},
-		{
-			"source": "${localEnv:HOME}/.gitconfig",
-			"target": "/home/vscode/.gitconfig",
-			"type": "bind"
-		},
-		{
-			"source": "${localEnv:HOME}/.ssh",
-			"target": "/home/vscode/.ssh",
 			"type": "bind"
 		}
 	]

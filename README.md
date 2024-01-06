@@ -27,13 +27,3 @@ rye sync
 
 ## JupyterLab
 VSCode 上で notebook を実行することができる. notebook を開き, Select Kernel をクリックして `.venv/bin/python` を指定する.
-
-また, Jupyter サーバーを立てることもできる.
-```sh
-make jupyter
-```
-で JupyterLab が起動する. ポートフォワーディングは Dev Container が自動で行う. ポートを指定して起動するには
-```sh
-make jupyter JUPYTER_PORT=8080
-```
-のように実行する. デフォルトは 8888 である.
