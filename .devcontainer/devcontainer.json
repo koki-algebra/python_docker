@@ -1,19 +1,37 @@
 {
-	"name": "python-docker",
+	"name": "Ubuntu",
 	"build": {
+		"context": ".",
 		"dockerfile": "Dockerfile"
 	},
+	"postCreateCommand": "rye sync",
 	"customizations": {
 		"vscode": {
-			"extensions": [
-				"ms-python.python",
-				"njpwerner.autodocstring",
-				"ms-toolsai.jupyter"
-			],
 			"settings": {
 				"python.defaultInterpreterPath": ".venv/bin/python"
-			}
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"ms-azuretools.vscode-docker"
+			]
 		}
 	},
-	"postCreateCommand": "poetry install --no-root"
+	"mounts": [
+		{
+			"source": "${localEnv:HOME}/.config/git",
+			"target": "/home/vscode/.config/git",
+			"type": "bind"
+		},
+		{
+			"source": "${localEnv:HOME}/.gitconfig",
+			"target": "/home/vscode/.gitconfig",
+			"type": "bind"
+		},
+		{
+			"source": "${localEnv:HOME}/.ssh",
+			"target": "/home/vscode/.ssh",
+			"type": "bind"
+		}
+	]
 }

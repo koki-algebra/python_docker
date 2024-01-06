@@ -4,13 +4,16 @@
 JUPYTER_PORT := 8888
 
 run: ## Run Python Script
-	@poetry run python src/main.py
+	@rye run main
+
+fmt: ## Format python code
+	@rye run black ./src
+
+lint: ## Lint python code
+	@rye run flake8 ./src
 
 jupyter: ## Run JupyterLab
-	@poetry run jupyter lab --port=${JUPYTER_PORT} --notebook-dir=./notebooks
-
-install: ## Install python packages
-	@poetry install --no-root
+	@rye run jupyter lab --port=${JUPYTER_PORT} --notebook-dir=./notebooks
 
 help: ## Show help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
