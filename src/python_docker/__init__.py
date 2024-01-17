@@ -1,5 +1,7 @@
-import numpy as np
+import torch
 
 
 def main():
-    print(np.random.rand(3, 3))
+    print(torch.__version__)
+    print(torch.cuda.get_device_name())
+    print(torch.cuda.device_count())
