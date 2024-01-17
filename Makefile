@@ -1,8 +1,6 @@
 .PHONY: help
 .DEFAULT_GOAL := help
 
-JUPYTER_PORT := 8888
-
 run: ## Run Python Script
 	@rye run main
 
