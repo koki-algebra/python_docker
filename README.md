@@ -27,3 +27,13 @@ rye sync
 
 ## JupyterLab
 VSCode 上で notebook を実行することができる. notebook を開き, Select Kernel をクリックして `.venv/bin/python` を指定する.
+
+## GPU usage
+`.devcontainer/devcontainer.json` の GPU 関連の記述のコメントを外すと CUDA, GPU が利用可能になる.
+
+## PyTorch installation
+以下のコマンドで PyTorch をインストール可能. ただし, CPU 環境と GPU 環境では異なるモジュールがインストールされる.
+
+```sh
+rye add torch && rye sync
+```
