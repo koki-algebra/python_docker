@@ -1,7 +1,15 @@
 {
+	"editor.formatOnSave": true,
 	"[python]": {
 		"editor.detectIndentation": false,
 		"editor.insertSpaces": true,
-		"editor.tabSize": 4
-	}
+		"editor.tabSize": 4,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always",
+			"source.organizeImports": "always"
+		}
+	},
+	"ruff.path": [
+		"${workspaceFolder}/.venv/bin/ruff"
+	]
 }
