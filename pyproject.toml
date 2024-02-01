@@ -19,15 +19,21 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "black>=23.12.1",
-    "flake8>=5.0.4",
+    "mypy>=1.8.0",
+    "pytest>=8.0.0",
+    "ruff>=0.1.15",
 ]
+
+[tool.rye.scripts]
+fmt = { chain = ["ruff format ./src ./tests"]}
+lint = { chain = [
+    "ruff check --fix ./src ./tests",
+    "mypy ./src ./tests"
+]}
+test = { chain = ["pytest ./tests"] }
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/python_docker"]
-
-[tool.black]
-line-length = 79

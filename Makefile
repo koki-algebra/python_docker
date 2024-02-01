@@ -5,10 +5,13 @@ run: ## Run Python Script
 	@rye run main
 
 fmt: ## Format python code
-	@rye run black ./src
+	@rye run fmt
 
 lint: ## Lint python code
-	@rye run flake8 ./src
+	@rye run lint
+
+test: ## Run test
+	@rye run test
 
 help: ## Show help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
