@@ -13,11 +13,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Install Rye
-        uses: baptiste0928/cargo-install@v2
-        with:
-          crate: rye
-          git: https://github.com/mitsuhiko/rye
-          branch: main
+        uses: eifinger/setup-rye@v2
       - name: Install Dependencies
         run: rye sync
       - name: Lint
