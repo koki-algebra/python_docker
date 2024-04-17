@@ -14,6 +14,9 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Install Rye
         uses: eifinger/setup-rye@v2
+      - name: Set Rye config
+        run: |
+          rye config --set-bool behavior.use-uv=true
       - name: Install Dependencies
         run: rye sync
       - name: Lint
